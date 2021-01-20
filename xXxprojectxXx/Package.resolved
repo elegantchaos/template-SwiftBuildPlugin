@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "XCTestExtensions",
-        "repositoryURL": "https://github.com/elegantchaos/XCTestExtensions",
+        "repositoryURL": "https://github.com/elegantchaos/XCTestExtensions.git",
         "state": {
           "branch": null,
-          "revision": "15991478b5c9bda527a0a59567ad0fa26940f74c",
-          "version": "1.1.2"
+          "revision": "8c80db8f01d0a33453bd0b223cb05639f3ead1d7",
+          "version": "1.2.0"
         }
       }
     ]

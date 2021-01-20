@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "xXxprojectxXx",
     platforms: [
-        .macOS(.v10_13)
+        .macOS(.v10_13), .iOS(.v13), .tvOS(.v13), .watchOS(.v6)
     ],
     products: [
         .library(
@@ -18,7 +18,7 @@ let package = Package(
             targets: ["xXxprojectxXx"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/XCTestExtensions", from: "1.1.2")
+        .package(url: "https://github.com/elegantchaos/XCTestExtensions.git", from: "1.2.0")
     ],
     targets: [
         .target(
