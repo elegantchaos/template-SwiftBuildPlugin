@@ -15,8 +15,4 @@ final class xXxprojectxXxTests: XCTestCase {
         // results.
         XCTAssertEqual(xXxprojectxXx().text, "Hello, World!")
     }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }
