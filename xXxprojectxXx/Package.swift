@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  Created by xXxuserxXx on xXxdatexXx.
@@ -10,22 +10,33 @@ import PackageDescription
 let package = Package(
     name: "xXxprojectxXx",
     platforms: [
-        .macOS(.v12), .iOS(.v15), .tvOS(.v15), .watchOS(.v8)
+        .macOS(.v12)
     ],
     products: [
-        .library(
-            name: "xXxprojectxXx",
-            targets: ["xXxprojectxXx"]),
+        .plugin(
+            name: "xXxprojectxXxPlugin",
+            targets: [
+                "xXxprojectxXxPlugin"
+            ]
+        ),
     ],
+    
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/XCTestExtensions.git", from: "1.4.2")
     ],
+    
     targets: [
-        .target(
-            name: "xXxprojectxXx",
-            dependencies: []),
-        .testTarget(
-            name: "xXxprojectxXxTests",
-            dependencies: ["xXxprojectxXx", "XCTestExtensions"]),
+        .plugin(
+            name: "xXxprojectxXxPlugin",
+            capability: .buildTool(),
+            dependencies: [
+                "xXxprojectxXxTool"
+            ]
+        ),
+        
+        .executableTarget(
+            name: "xXxprojectxXxTestsTool",
+            dependencies: [
+                ]
+        ),
     ]
 )
